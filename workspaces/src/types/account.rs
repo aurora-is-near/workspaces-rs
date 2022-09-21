@@ -186,6 +186,12 @@ pub struct Contract {
     pub(crate) account: Account,
 }
 
+impl From<Account> for Contract {
+    fn from(account: Account) -> Self {
+        Contract { account }
+    }
+}
+
 impl fmt::Debug for Contract {
     fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
         f.debug_struct("Contract")
