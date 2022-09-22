@@ -242,7 +242,7 @@ pub struct CallTransaction<'a, 'b> {
 }
 
 impl<'a, 'b> CallTransaction<'a, 'b> {
-    pub(crate) fn new(
+    pub fn new(
         worker: &'a Worker<dyn Network>,
         contract_id: AccountId,
         signer: InMemorySigner,
